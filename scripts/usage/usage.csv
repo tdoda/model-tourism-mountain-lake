@@ -1,0 +1,4 @@
+Parameters,Values,Units,Reference
+Number_swimmers,10,persons.day-1,-
+Swimming_duration,0.1,h.pers-1,-
+Duration_activity_day,12,h,-

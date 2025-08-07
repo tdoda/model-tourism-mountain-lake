@@ -1,0 +1,4 @@
+Parameters,Values,Units,Reference
+Amount_sunscreen,10,g.person-1,Buser_et_al_2005
+Percentage_UV_filter,1,%,Buser_et_al_2005
+Percentage_release,10,%,Labille_et_al_2020b
