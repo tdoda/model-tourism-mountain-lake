@@ -1,0 +1,20 @@
+matplotlib
+numpy
+cmocean
+pandas
+scipy
+netCDF4
+xarray
+python-dateutil
+pyyaml
+bottleneck
+gpxpy
+plotly
+scikit-learn
+cartopy
+# Optional for notebook use:
+jupyter
+notebook
+ipython
+ipywidgets
+ipympl           # For `%matplotlib widget` in Jupyter notebooks
