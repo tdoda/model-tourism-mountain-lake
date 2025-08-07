@@ -337,6 +337,3 @@ tags
 .renku/tmp
 .renku/cache
 
-# Data folders
-data/*/*/*/*
-!data/*/*/*/.gitkeep
