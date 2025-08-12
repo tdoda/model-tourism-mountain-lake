@@ -1,3 +1,4 @@
 Parameters,Values,Units
 Time_step,1,h
-Duration_simulation,60,d
+Start_date,202506010000,yyyymmddHHMM
+End_date,202510010000,yyyymmddHHMM
