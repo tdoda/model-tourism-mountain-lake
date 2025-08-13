@@ -4,3 +4,4 @@ Surface_area,96836,m2,lacs_sentinelles_database
 Maximum_depth,18,m,lacs_sentinelles_database
 Volume,653037,m3,lacs_sentinelles_database
 Outflow,0.2,m3.s-1,measurements_20250715
+Thermocline_depth,8,m,profiles_20240703
