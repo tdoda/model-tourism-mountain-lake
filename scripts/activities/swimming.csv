@@ -1,6 +1,6 @@
 Parameters,Values,Units,Reference
 Number_swimmers,10,persons.day-1,-
-Swimming_duration,0.1,h.pers-1,-
+Swimming_duration,15,min.pers-1,-
 Start_swimming_time,0900,HHMM,-
 End_swimming_time,1800,HHMM,-
 Start_swimming_day,20250701,yyyymmdd

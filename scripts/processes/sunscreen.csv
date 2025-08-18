@@ -1,6 +1,10 @@
 Parameters,Values,Units,Reference
 Name_compound,UV_filter,-,-
+Activity,swimming,-,-
 Initial_concentration,0,ng.l-1,-
-Amount_sunscreen,10,g.person-1,Buser_et_al_2005
+Inflow_concentration,0,ng.l-1,-
+Amount_per_person,10,g.person-1,Buser_et_al_2005
 Percentage_UV_filter,1,%,Buser_et_al_2005
-Percentage_release,10,%,Labille_et_al_2020b
+Percentage_release,0.1--1,%.min-1,Danovaro_et_al_2008
+Decay_rate,0,g.m-3.s-1,-
+
