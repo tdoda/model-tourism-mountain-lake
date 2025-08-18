@@ -1,7 +1,7 @@
 name: lake-tourism # You can rename this
 channels:
   - conda-forge
-  - defaults
+  - nodefaults
 
 dependencies:
   - python=3.11  # Or whatever version you're using
@@ -12,3 +12,9 @@ dependencies:
   - matplotlib
   - cmocean
   - ipympl
+  - pip
+  #- pip:
+	  # put packages to be installed by pip here
+    # - ...
+# Note: prefix can be changed
+prefix: "/opt/conda"
