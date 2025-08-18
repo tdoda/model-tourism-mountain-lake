@@ -1,7 +1,7 @@
 # Note: name can be changed
 name: "lake-tourism"
 channels:
-	# important: do not use 'defaults', but always include 'nodedefaults'
+# important: do not use 'defaults', but always include 'nodedefaults'
   - conda-forge
   - nodefaults
 dependencies:
@@ -12,10 +12,9 @@ dependencies:
   - xarray
   - matplotlib
   - cmocean
-  #- ipympl
+  - ipympl
   # - pip:
-	  # put packages to be installed by pip here
+    # put packages to be installed by pip here
     # - ...
 # Note: prefix can be changed
 prefix: "/opt/conda"
-
