@@ -1,26 +1,14 @@
-name: genz-adcp-env  # You can rename this
+name: lake-tourism # You can rename this
 channels:
   - conda-forge
   - defaults
 
 dependencies:
   - python=3.10  # Or whatever version you're using
+  - netCDF4
   - numpy
   - pandas
-  - matplotlib
-  - ipympl
-  - scipy
-  - netcdf4
   - xarray
+  - matplotlib
   - cmocean
-  - bottleneck
-  - plotly
-  - scikit-learn
-  - cartopy
-  - pyyaml
-  - gpxpy
-  - python-dateutil
-  - jupyter
-  - notebook
-  - ipython
-  - ipywidgets
+  - ipympl
