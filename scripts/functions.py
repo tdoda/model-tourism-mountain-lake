@@ -2,7 +2,7 @@
 Functions used for the two-box lake model.
 
 Author: T. Doda, Faculty of Geoscience and Environment, Institute of Earth Surface Dynamics, University of Lausanne
-Contact: tomy.doda@gmail.com
+Contact: tomy.doda@unil.ch
 Date: xx.dd.2025
 """
 
@@ -40,10 +40,14 @@ def load_parameters(file):
                     values_dict[key]=datetime.strptime(values_dict[key],"%Y%m%d%H%M")
                 elif data_dict["Units"][key]=="HHMM":
                     values_dict[key]=datetime.strptime(values_dict[key],"%H%M")
-            try:
-                values_dict[key]=float(values_dict[key])
-            except:
-                continue
+            if type(values_dict[key])==str and "--" in values_dict[key]: # Range
+                range_str=values_dict[key]
+                values_dict[key]=np.array([float(range_str[:range_str.find("--")]),float(range_str[range_str.find("--")+2:])])            
+            else:
+                try:
+                    values_dict[key]=float(values_dict[key])
+                except:
+                    continue
     else:
         raise Exception("Parameter values are missing")
         
