@@ -1,7 +1,0 @@
-netCDF4
-numpy
-pandas
-xarray
-matplotlib
-cmocean
-ipympl           # For `%matplotlib widget` in Jupyter notebooks
