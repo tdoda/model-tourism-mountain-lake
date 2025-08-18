@@ -4,7 +4,7 @@ channels:
   - defaults
 
 dependencies:
-  - python=3.10  # Or whatever version you're using
+  - python=3.11  # Or whatever version you're using
   - netCDF4
   - numpy
   - pandas
