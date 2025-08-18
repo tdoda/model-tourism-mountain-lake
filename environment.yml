@@ -12,7 +12,7 @@ dependencies:
   - xarray
   - matplotlib
   - cmocean
-  - ipympl
+  #- ipympl
   # - pip:
 	  # put packages to be installed by pip here
     # - ...
