@@ -1,10 +1,11 @@
-name: lake-tourism # You can rename this
+# Note: name can be changed
+name: "lake-tourism"
 channels:
+	# important: do not use 'defaults', but always include 'nodedefaults'
   - conda-forge
   - nodefaults
-
 dependencies:
-  - python=3.11  # Or whatever version you're using
+  - python=3.11 # set your python version here
   - netCDF4
   - numpy
   - pandas
@@ -12,9 +13,9 @@ dependencies:
   - matplotlib
   - cmocean
   - ipympl
-  - pip
-  #- pip:
+  # - pip:
 	  # put packages to be installed by pip here
     # - ...
 # Note: prefix can be changed
 prefix: "/opt/conda"
+
