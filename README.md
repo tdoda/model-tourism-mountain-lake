@@ -6,6 +6,10 @@ A simple model to quantify the impacts of tourism on mountain lakes.
 
 Remote repository: https://github.com/tdoda/model-tourism-mountain-lake.git 
 
+Run the model via Renku:
+
+[![launch - renku](https://renkulab.io/renku-badge.svg)](https://renkulab.io/p/tomy.doda/model-tourism-mountain-lake/sessions/01K30QV9D3VMZHBHK62W8KFJ21/start)
+
 ## Installation
 
 You need to have [git](https://git-scm.com/downloads) and [git-lfs](https://git-lfs.github.com/) installed in order to successfully clone the repository.
