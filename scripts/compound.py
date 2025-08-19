@@ -191,8 +191,10 @@ class COMP:
         Atherm=A0 # [m2]
         h_mean=Vlake/A0
         
-        if np.sum(h_mean==(h_epi+h_hypo))<len(h_epi):
-            print(h_epi+h_hypo)
+        if np.sum(np.abs(h_mean-(h_epi+h_hypo))<1e-3)<len(h_epi):
+            print(np.sum(h_mean==(h_epi+h_hypo)))
+            print(len(h_epi))
+            print("Difference: {}".format((h_epi+h_hypo)-h_mean))
             raise Exception("Incorrect calculation of mean lake depth for {} values".format(np.sum((h_epi+h_hypo)!=h_mean)))
         
         
