@@ -40,22 +40,21 @@ class COMP:
         
         self.data={}
     #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%        
-    def set_time_series(self,param_sim,param_process):
+    def set_time_series(self,tnum,tdate,param_process,Qout):
         """Function set_time_series
 
         Initiate the variables as time series.
 
         Inputs:
-            param_sim (dict): parameters of the simulation (from csv file)
+            tnum (numpy array of float): time values as number of seconds since 01.01.1970
+            tdate (numpy array of datetime): datetime values corresponding to tnum
             param_process (dict): parameters related to the specific compound (from csv file)
+            Qout (numpy array): time series of outflow discharge [m3/s]
             
         Outputs:
             None (addition of data in COMP object only)
         """
         
-        
-        tdate=np.arange(param_sim["Start_date"],param_sim["End_date"],timedelta(hours=param_sim["Time_step"])).astype(datetime)
-        tnum=tdate.astype("datetime64[ns]").astype(np.float64)*1e-9
         
         self.data["time"]=tnum
         self.data["tdate"]=tdate
@@ -65,6 +64,7 @@ class COMP:
         self.data["Fact"]=np.zeros((2,len(tnum)))
         self.data["Fz"]=np.full((2,len(tnum)),np.nan)
         self.data["Fout"]=np.full((2,len(tnum)),np.nan)
+        self.data["Qout"]=Qout
   
         
     #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%       
@@ -114,7 +114,7 @@ class COMP:
             
         # 2-Input from inflows:
         self.data["Fin"]=np.full(self.data["time"].shape,
-                    param_lake["Outflow"]*param_process["Inflow_concentration"]*fact_conc) # [g.s-1]
+                    self.data["Qout"]*param_process["Inflow_concentration"]*fact_conc) # [g.s-1]
         
         # 3-Reaction (to add)
         self.data["Repi"]=np.zeros(self.data["time"].shape)
@@ -122,8 +122,7 @@ class COMP:
         
         # 4-Other fluxes and mass budget (iterative):
         h_therm=np.full(self.data["time"].shape,param_lake["Thermocline_depth"]) # Assumed constant for now
-        Qout=np.full(self.data["time"].shape,param_lake["Outflow"]) # Assumed constant for now
-        h_epi,h_hypo,p=self.mass_budget(param_lake["Volume"],param_lake["Surface_area"],h_therm,param_lake["Maximum_depth"],Qout,param_lake["Kz"])
+        h_epi,h_hypo,p=self.mass_budget(param_lake["Volume"],param_lake["Surface_area"],h_therm,param_lake["Maximum_depth"],self.data["Qout"],param_lake["Kz"])
         
         return h_epi,h_hypo,p
 
