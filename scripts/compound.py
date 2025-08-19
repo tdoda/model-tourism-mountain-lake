@@ -193,7 +193,7 @@ class COMP:
         
         if np.sum(h_mean==(h_epi+h_hypo))<len(h_epi):
             print(h_epi+h_hypo)
-            raise Exception("Incorrect calculation of mean lake depth")
+            raise Exception("Incorrect calculation of mean lake depth for {} values".format(np.sum((h_epi+h_hypo)!=h_mean)))
         
         
         for kt in range(len(self.data["time"])-1):
