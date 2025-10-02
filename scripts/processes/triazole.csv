@@ -1,0 +1,6 @@
+Parameters,Values,Units,Reference
+Name_compound,triazole,-,-
+Activity,discharge,-,-
+Initial_concentration,0,ng.l-1,-
+Inflow_concentration,0,ng.l-1,-
+Decay_rate,0,g.m-3.s-1,-

@@ -1,0 +1,7 @@
+Parameters,Values,Units,Reference
+Discharge_constantflow,0,m3.s-1,-
+Discharge_concentration,0,ng.l-1,-
+Start_dicharge_time,0000,HHMM,-
+End_discharge_time,0000,HHMM,-
+Start_discharge_day,20250701,yyyymmdd
+End_discharge_day,20250831,yyyymmdd
